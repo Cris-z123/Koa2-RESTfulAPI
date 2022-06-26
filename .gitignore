@@ -3,6 +3,7 @@ node_modules
 *.zip
 dist
 src/config
+src/logs
 
 # local env files
 .env.local
