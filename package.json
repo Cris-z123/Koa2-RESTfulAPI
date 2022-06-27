@@ -13,12 +13,6 @@
     "lint:fix": "npx eslint ./src/**/*.ts --fix",
     "commit": "cz-customizable"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "src/**/*.{ts,js}": [
       "eslint --fix",
@@ -30,7 +24,9 @@
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-cors": "^0.0.16",
+    "koa-helmet": "^6.1.0",
     "koa-router": "^10.1.1",
+    "log4js": "^6.5.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.0"
   },
