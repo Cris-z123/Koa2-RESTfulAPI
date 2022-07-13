@@ -361,17 +361,17 @@
   dependencies:
     "@types/koa" "*"
 
-"@types/koa-cors@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.npmmirror.com/@types/koa-cors/-/koa-cors-0.0.2.tgz#369c753fb383640f225579c70a4f9a286b4931b7"
-  integrity sha512-uNaDY26HUVO+2C6arK8ZFODs9mBjYprD8mlvkVe2bYdX9wzEeKtycVXPafXpUkePhMh4sffIMkhRDyedokG/QA==
-  dependencies:
-    "@types/koa" "*"
-
 "@types/koa-router@^7.4.4":
   version "7.4.4"
   resolved "https://registry.npmmirror.com/@types/koa-router/-/koa-router-7.4.4.tgz#db72bde3616365d74f00178d5f243c4fce7da572"
   integrity sha512-3dHlZ6CkhgcWeF6wafEUvyyqjWYfKmev3vy1PtOmr0mBc3wpXPU5E8fBBd4YQo5bRpHPfmwC5yDaX7s4jhIN6A==
+  dependencies:
+    "@types/koa" "*"
+
+"@types/koa2-cors@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npmmirror.com/@types/koa2-cors/-/koa2-cors-2.0.2.tgz#a348fc2a0e227fe60909effaf43396898742e8fc"
+  integrity sha512-S7D//zbF0oJJJ7l6eFT2ThXPCjxHOv84HKMKiZPmVu51Bf4GWZGbTZDedIoUo/aXEIwTnfKbSiod/vqidfDwjg==
   dependencies:
     "@types/koa" "*"
 
@@ -1889,11 +1889,6 @@ koa-convert@^2.0.0:
     co "^4.6.0"
     koa-compose "^4.1.0"
 
-koa-cors@^0.0.16:
-  version "0.0.16"
-  resolved "https://registry.npmmirror.com/koa-cors/-/koa-cors-0.0.16.tgz#98107993a7909e34c042986c5ec6156d77f3432e"
-  integrity sha512-s15knPxe3AJBi2I/ZMPL0pSqU+PLYLO6k5tI0AqClkzavowvocPlSdFUwaHNqtjHMhsGmiq2tiX/25iILJx9YA==
-
 koa-helmet@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmmirror.com/koa-helmet/-/koa-helmet-6.1.0.tgz#5ace72266b4b86c21c7a435ffcdaf3999e2d3a6d"
@@ -1911,6 +1906,11 @@ koa-router@^10.1.1:
     koa-compose "^4.1.0"
     methods "^1.1.2"
     path-to-regexp "^6.1.0"
+
+koa2-cors@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npmmirror.com/koa2-cors/-/koa2-cors-2.0.6.tgz#9ad23df3a0b9bb84530b46f5944f3fb576086554"
+  integrity sha512-JRCcSM4lamM+8kvKGDKlesYk2ASrmSTczDtGUnIadqMgnHU4Ct5Gw7Bxt3w3m6d6dy3WN0PU4oMP43HbddDEWg==
 
 koa@^2.13.4:
   version "2.13.4"
