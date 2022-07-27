@@ -6,3 +6,9 @@
 **/*.sh
 
 /public/*
+
+*.log
+logs/
+
+yarn.lock
+package-lock.json

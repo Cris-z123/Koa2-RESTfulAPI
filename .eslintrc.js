@@ -2,14 +2,14 @@ module.exports = {
   root: true,
   env: {
     node: true,
-    es2021: true,
+    es2021: true
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: 'module'
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
   rules: {
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
@@ -28,12 +28,12 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/ban-types': 'off',
     'no-prototype-builtins': 'off',
-    'space-before-function-paren': 0,
+    'space-before-function-paren': 0
   },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'prettier',
-  ],
-}
+    'prettier'
+  ]
+};
