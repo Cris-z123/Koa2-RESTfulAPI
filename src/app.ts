@@ -1,37 +1,29 @@
-import Koa from "Koa";
-import router from "./router";
-import bodyparser from "koa-bodyparser";
-import cors from "koa-cors";
-import seq from "./models/seq";
-import { appConfig } from "./config/env";
+import Koa from 'Koa';
+import router from './router';
+import bodyparser from 'koa-bodyparser';
+import Cors from 'koa2-cors';
+import helmet from 'koa-helmet';
+import { loggerMiddleware } from './middleware/logger';
+import { corsConfig } from './middleware/cors';
+import { error, success } from './middleware/response';
+import { appConfig } from './config/env';
 
 const app = new Koa();
 
+app.use(loggerMiddleware);
+
+app.use(error);
+
 app.use(bodyparser());
 
-app.use(cors());
+app.use(helmet());
 
-app.use(async (ctx, next) => {
-  const start = new Date();
-  await next();
-  const ms = Number(new Date()) - Number(start);
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
-});
-(async function () {
-  try {
-    await seq.authenticate();
-    await seq.sync();
-  } catch (error) {
-    console.log("连接失败:" + error);
-  }
-})();
+app.use(Cors(corsConfig));
 
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.on("error", (err, ctx) => {
-  console.error("server error", err, ctx);
-});
+app.use(success);
 
 app.listen(appConfig.port, () => {
   console.log(`app start at port ${appConfig.port}`);
