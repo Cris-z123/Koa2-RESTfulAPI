@@ -9,13 +9,14 @@
     "build": "npm-run-all resetFolder compile",
     "compile": "tsc",
     "resetFolder": "rimraf dist/*",
-    "lint": "eslint --ext .js, .ts src",
+    "lint": "eslint --fix src --ext .js, .ts",
     "lint:fix": "npx eslint ./src/**/*.ts --fix",
+    "prepare": "husky install",
     "commit": "cz-customizable"
   },
   "lint-staged": {
     "src/**/*.{ts,js}": [
-      "eslint \"src/**/*.ts\" --fix",
+      "yarn lint",
       "prettier --write"
     ]
   },
